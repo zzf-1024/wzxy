@@ -1,0 +1,49 @@
+
+.none{ display:none}
+.xmglan{ width:100%;color:#fff; padding:20px 0;}
+.xmgl_heard{ width:100%; display:block; overflow:hidden}
+.xmgl_heard li{ float:left; list-style:none; font-size:12px; height:24px; line-height:24px; text-align:center;background:#fafafb; width:50%; cursor:pointer; border-top:1px #fafafb solid;border-bottom:1px #fafafb solid}
+.xmgl_heard li.hove{ background:#f8f9fa}
+
+
+.xm_cszs{ font-size:12px; padding:10px 10px 0 10px; }
+.xm_cszs li { line-height:22px;overflow:hidden}
+.xm_cszs li span{ color:#00ff00; padding:0 5px 0 10px}
+.xm_cszs li p{ float:left;width:33%}
+.xm_cszs li p span{ color:#00ffff; padding:0}
+.xm_cszs li p cite{ color:#00ffff;}
+
+/*学生信息 */
+.lytj {width:100%;float: left;height:250px;}
+.wgrytj_bt{ padding:10px; clear:both; display:block;border-top:1px #fafafb solid; color:#fff}
+.wgrytj_tb{ padding-left:10px;}
+
+/*毕业生信息*/
+.center_zs{ width:600px;}
+.box1-back{height:763px;}
+.box1-back1{height:0px;}
+.box1-back2{height:763px;}
+/*每个专业学分占比*/
+.wenti_dj{ width:40%; float:left}
+.wenti_bg{ float:left; padding-top:10px; width:60%;}
+.wenti_bg table{border-collapse:collapse;border: 1px solid #f5f6f7; color:#fff; width:95%}  
+.wenti_bg td{border-collapse:collapse; border: 1px solid #f5f6f7; padding:2px 4px; }  
+.wenti_bg td.green{ color:#05d60f; text-align:center}  
+.wenti_bg td.orange{ color:#d75a07; text-align:center}  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="Generator" content="EditPlus®">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<link href="css/public.css" rel="stylesheet" type="text/css"/>
+<link href="css/jianlisw.css" rel="stylesheet" type="text/css"/>
+<title>梧州学院师生情况</title>
+</head>
+<body>
+<div class="caption-title">
+    <i class="fl"><img src="images/title-left.png" ></i>
+    <span class="biaoti fl">梧州学院师生情况</span>
+    <i class="fr"><img src="images/title-right.png" ></i>
+</div>
+<div class="zhenwen">
+    <div class="left_zs fl">
+          
+    	<!-- 学生信息 -->
+        <div class="data-box1 left_tb fl ">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left fl">[</b>
+                <span>相关数据可视化</span>
+                <b class="data-title-right fr">]</b>
+            </div>
+                <!-- 学生相关数据-->
+            <div class="xmglan">        
+                <div id="tianqi" class="lytj"></div> 
+                
+              	<div class="wgrytj">
+                	<span class="wgrytj_bt">学生各数据占比（%）</span>
+                	<div class="wgrytj_tb">
+                     <div id="gztj" style="height:173px"></div>                    
+                    </div>
+                </div>
+                
+                <div class="wgrytj">
+                	<span class="wgrytj_bt">学生各数据占比（%）</span>
+                	<div class="wgrytj_tb">
+                     <div id="xcrytj" style="height:223px"></div>                    
+                    </div>
+                </div>
+            </div>     
+        </div>
+                
+    </div>
+    
+    <div class="center_zs fl">
+        <div class="data-box1 box1-back">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left">[</b>
+                <span>各专业学分比例</span>
+                <b class="data-title-right">]</b>
+            </div>
+            <div id="wzxy1" class="box1-back2"></div>
+        </div>
+        
+    </div>    
+    <!--右侧图表展示 -->
+    <div class="right_zs fl">
+    	 <!-- 师资情况 -->        
+        <div class="data-box1 right_tb ">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left">[</b>
+                <span>师资情况</span>
+                <b class="data-title-right">]</b>
+            </div>
+            <div class="ryclts"> 
+              <div id="xjfxzt" style="height:300px"></div>
+            </div> 
+        </div>  
+            
+        <div class="data-box1 right_tb mtop40">
+            <i class="topL"></i>
+            <i class="topR"></i>
+            <i class="bottomL"></i>
+            <i class="bottomR"></i>
+            <div class="data-title">
+                <b class="data-title-left">[</b>
+                <span>各学科专业占比</span>
+                <b class="data-title-right">]</b>
+            </div>
+            <div class="ryclts">          			
+                <div class="clearfix"><div id="fxbhqs" style="height:400px"></div></div>
+            </div> 
+        </div>   
+    </div>
+
+</div>      
+        
+<div class="h30 clearfix"></div>      
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/echarts.min.js"></script>
+<script src="js/monitor_sw.js"></script>
+<script src="js/echarts.js"></script>
+<script>
+$(function(){
+		
+	$(".xmgl_heard li").click(function(){
+	
+		$(this).attr("class","");
+		$(this).siblings().attr("class","hove");
+		$("#xmgl_cen").find(".xmgl_tb").eq($(this).index()).removeClass("none").siblings().addClass("none")
+	});
+})
+</script>
+
+</html>
