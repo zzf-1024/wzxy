@@ -183,9 +183,9 @@ var option = {
   },
   dataZoom: [
     {
-      type: 'inside',
       show: true,
       realtime: true,
+      type: 'inside',
       start: 30,
       end: 70,
     },
