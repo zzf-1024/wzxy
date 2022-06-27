@@ -352,7 +352,7 @@ var dataValue=[289, 229, 568, 1047, 638, 239, 445, 713, 358, 271, 91, 53];
 option = {
     tooltip: {},
     legend: {
-        data:['各学院毕业生数量','毕业生去处'],
+        data:['各学院毕业生数量'],
         selectedMode: 'single',
         orient: "vertical",
         x: '5px',
@@ -379,18 +379,8 @@ option = {
             type: 'bar',
             data: dataValue
         },
-        {
-          name:'毕业生去处',
-            type: 'pie',
-            data: [
-                {value:71.58,name:'去企业'},
-                {value:4.56,name:'升学'},
-                {value:0.07,name:'留学'},
-            ],
-        }
     ]
 };
-
 if (option && typeof option === "object") {
     myChart.setOption(option, true);
 }
