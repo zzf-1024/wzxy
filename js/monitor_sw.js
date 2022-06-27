@@ -588,73 +588,90 @@ option = null;
 app.title = '玫瑰图';
 function fetchData(cb) {
   setTimeout(function () {
-    cb({
+      cb({
       data: [
-        { name: '工学',value:36.36},
-        { name: '管理学',value:18.18 },
-        { name: '艺术学',value:14.55 },
-        { name: '文学',value:10.91 },
-        { name: '理学',value:5.45 },
-        { name: '教育学',value:3.64 },
-        { name: '法学',mvalueax:3.64 },
-        { name: '经济学',value:3.64 },
-        { name: '哲学',value:1.82 },
-        { name: '农学',value:1.82 },
+          { name: '工学',value:36.36},
+          { name: '管理学',value:18.18 },
+          { name: '艺术学',value:14.55 },
+          { name: '文学',value:10.91 },
+          { name: '理学',value:5.45 },
+          { name: '教育学',value:3.64 },
+          { name: '法学',value:3.64 },
+          { name: '经济学',value:3.64 },
+          { name: '哲学',value:1.82 },
+          { name: '农学',value:1.82 },
       ]
-    });
-  }, 2000);
+      });
+  }, 1000);
 }
-option = {
-  title: {
-    text: '各学科专业占比',
-    textStyle: {
-      color: '#0D0D0D'
-    },
+var option = { 
+  tooltip: { },
+  legend: {
+      data:['各学科专业占比1(%)','各学科专业占比2(%)'],
+      selectedMode: 'single',
+      orient: "vertical",
+      x: '5px',
+      
   },
-  toolbox: {
-    show: true,
-    feature: {
-      mark: { show: true },
-      dataView: { show: true, readOnly: false },
-      restore: { show: true },
-      saveAsImage: { show: true }
-    }
-  },
-  tooltip: {trigger: 'item' },
-  grid: {
-      top: 20,
-      right: 0,
-      left: 50,
-      height: 300
-    },
-  series: [
-    {
-      name: '各学科专业占比(%)',
+  calculable: true,
+  series: [  
+  {
+      name: '各学科专业占比1(%)',
       type: 'pie',
       radius: [20, 100],
       center: ['50%', '50%'],
       roseType: 'area',
       itemStyle: {
-        borderRadius: 8
-      },
-      
-    }
-  ]
+      borderRadius: 8
+    },
+  },
+  {
+    name: '各学科专业占比2(%)', type: 'funnel', left: '3%',
+    sort: 'descending',  
+    top: 60, bottom: 60, width: '80%',
+    min: 0, max: 100,
+    minSize: '0%',  
+    maxSize: '100%', 
+    gap: 2, 
+    label: { show: true, position: 'inside' },  
+    labelLine: {
+      length: 10,  
+      lineStyle: {
+        width: 1, 
+        type: 'solid'
+      }
+    },
+    itemStyle: {
+      normal: {  
+        label: { show: true, fontSize: 15, color: 'blue', position: 'inside', },
+        borderColor: '#fff',  
+        borderWidth: 0, 
+        shadowBlur: 50,  
+        shadowOffsetX: 0,  
+        shadowOffsetY: 50,  
+        shadowColor: 'rgba(0,255,0,0.4)'
+      }
+    },
+  }
+]
 };
 myChart.showLoading();
 fetchData(function (data) {
   myChart.hideLoading();
   myChart.setOption({
     series: [
-      {
+    {
         data: data.data
-      }
+    },
+    {
+        data: data.data
+    }
     ]
   });
 });
 
-    if (option && typeof option === 'object') {
-      myChart.setOption(option);
-    }
+if (option && typeof option === 'object') {
+  myChart.setOption(option);
+}
 
-    window.addEventListener('resize', myChart.resize);
+window.addEventListener('resize', myChart.resize);
